@@ -1,0 +1,284 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5DC; /* Beige background */
+    color: #4A4A4A; /* Dark gray text for contrast */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #1E1E1E; /* Darker gray for better contrast */
+    color: #F5F5DC; /* Beige text for contrast */
+}
+
+/* Header */
+header {
+    background-image: url('images/header-image.jpg'); /* Local image path or external URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Creates the parallax effect */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    min-height: 300px;
+    overflow: hidden; /* Ensures no overflow issues */
+}
+
+/* Overlay to improve text readability */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+    z-index: 1; /* Ensure the overlay is above the background image */
+}
+
+/* Ensure header content is above the overlay */
+header h1,
+header p,
+#dark-mode-toggle {
+    position: relative;
+    z-index: 2; /* Place content above the overlay */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem; /* Larger font size for the title */
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.2rem; /* Slightly larger font size for the subtitle */
+}
+
+/* Dark Mode Toggle Button */
+#dark-mode-toggle {
+    background: rgba(139, 0, 0, 0.8); /* Semi-transparent dark red */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+    position: absolute; /* Position the button absolutely within the header */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+}
+
+#dark-mode-toggle:hover {
+    background: rgba(165, 42, 42, 0.8); /* Slightly lighter red on hover */
+}
+
+#toggle-icon {
+    font-size: 1.2rem;
+}
+
+button {
+    background: #8B0000; /* Dark red */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #A52A2A; /* Slightly lighter red on hover */
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background: #FFFFFF; /* White background for sections */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode section {
+    background: #2E2E2E; /* Dark gray for sections in dark mode */
+    color: #F5F5DC; /* Beige text for contrast */
+}
+
+h2 {
+    color: #B22222; /* Firebrick red for headings in light mode */
+}
+
+body.dark-mode h2 {
+    color: white; /* Bright orange-red for headings in dark mode */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #F5F5DC; /* Beige background for list items */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+body.dark-mode ul li {
+    background: #3E3E3E; /* Dark gray for list items in dark mode */
+    color: #F5F5DC; /* Beige text for contrast */
+}
+
+/* Projects Grid */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.proyecto-card {
+    background: #FFFFFF; /* White background for project cards */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .proyecto-card {
+    background: #3E3E3E; /* Dark gray for project cards in dark mode */
+    color: #F5F5DC; /* Beige text for contrast */
+}
+
+.proyecto-media {
+    height: 150px;
+    background: #E0E0E0; /* Light gray placeholder for media */
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+.proyecto-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #B22222; /* Firebrick red for links */
+    text-decoration: none;
+}
+
+body.dark-mode .proyecto-link {
+    color: white; /* Bright orange-red for links in dark mode */
+}
+
+.proyecto-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #B22222; /* Firebrick red for footer */
+    color: white;
+}
+
+body.dark-mode footer {
+    background: #8B0000; /* Dark red for footer in dark mode */
+}
+
+
+/* Lenguajes Section */
+.lenguajes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.lenguaje-card {
+    background: #FFFFFF; /* White background for cards */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+body.dark-mode .lenguaje-card {
+    background: #3E3E3E; /* Dark gray for cards in dark mode */
+    color: #F5F5DC; /* Beige text for contrast */
+}
+
+.lenguaje-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.lenguaje-card i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #B22222; /* Firebrick red for icons */
+}
+
+body.dark-mode .lenguaje-card i {
+    color: white; /* Bright orange-red for icons in dark mode */
+}
+
+.lenguaje-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+}
+
+.lenguaje-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #4A4A4A; /* Dark gray for text */
+}
+
+body.dark-mode .lenguaje-card p {
+    color: #F5F5DC; /* Beige text for contrast in dark mode */
+}
+
+#header-title-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-section-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-section {
+    interpolate-size: allow-keywords;
+    height: 80px;
+    overflow-y: hidden;
+    transition: all 0.3s;
+}
+
+.info-section.show {
+    height: auto;
+    height: calc(auto);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        margin: 10px;
+    }
+
+    header {
+        background-attachment: scroll; /* Disable parallax on mobile */
+    }
+}
