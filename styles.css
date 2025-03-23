@@ -121,23 +121,6 @@ body.dark-mode h2 {
     color: white; /* Bright orange-red for headings in dark mode */
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    background: #F5F5DC; /* Beige background for list items */
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 4px;
-}
-
-body.dark-mode ul li {
-    background: #3E3E3E; /* Dark gray for list items in dark mode */
-    color: #F5F5DC; /* Beige text for contrast */
-}
-
 /* Projects Grid */
 .proyectos-grid {
     display: grid;
@@ -158,11 +141,12 @@ body.dark-mode .proyecto-card {
 }
 
 .proyecto-media {
-    height: 150px;
-    background: #E0E0E0; /* Light gray placeholder for media */
+    width: 100%;
     margin: 10px 0;
     border-radius: 4px;
+    background-size: cover;
 }
+
 
 .proyecto-link {
     display: inline-block;
@@ -246,7 +230,7 @@ body.dark-mode .lenguaje-card p {
 #header-title-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
 }
 
 .info-section-header {

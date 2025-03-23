@@ -31,13 +31,14 @@ for (let section of infoSections) {
     const toggleButton = section.querySelector('.info-section-toggle-button');
     toggleButton.addEventListener('click', () => {
         section.classList.toggle('show');
+        
+        if (section.classList.contains('show')) {
+            toggleButton.textContent = "Ocultar";
+        } else {
+            toggleButton.textContent = "Mostrar";
+        }
     });
 
-    if (section.classList.contains('show')) {
-        toggleButton.innerText = "Ocultar";
-    } else {
-        toggleButton.innerText = "Mostrar";
-    }
 }
 
 // Dynamic Year in Footer
