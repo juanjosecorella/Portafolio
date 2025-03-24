@@ -145,8 +145,16 @@ body.dark-mode .proyecto-card {
     margin: 10px 0;
     border-radius: 4px;
     background-size: cover;
+    transition: all 0.3s;
 }
 
+.proyecto-media:hover {
+    -webkit-filter: contrast(30%);
+       -moz-filter: contrast(30%);
+         -o-filter: contrast(30%);
+        -ms-filter: contrast(30%);
+            filter: contrast(30%); 
+}
 
 .proyecto-link {
     display: inline-block;
