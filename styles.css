@@ -242,7 +242,7 @@ body.dark-mode .lenguaje-card p {
 
 .info-section {
     interpolate-size: allow-keywords;
-    height: 80px;
+    height: 75px;
     overflow-y: hidden;
     transition: all 0.3s;
 }
@@ -264,5 +264,9 @@ body.dark-mode .lenguaje-card p {
 
     header {
         background-attachment: scroll; /* Disable parallax on mobile */
+    }
+
+    #header-title-section {
+        align-items: center;
     }
 }
