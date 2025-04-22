@@ -26,3 +26,4 @@ El repositorio del proyecto se encuentra en https://github.com/juanjosecorella/P
 
 ## Deployment
 
+Se encuentra el deployment del sitio actualmente en la página https://portafolio-juan-jose-corella.netlify.app/
